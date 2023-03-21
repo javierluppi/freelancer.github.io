@@ -1,0 +1,253 @@
+:root{
+    --negro: #4b4b4d;
+    --azul:#12c2e9;
+    --violeta: #9671ed;
+    --celeste: #8bf5db;
+    --gris_claro: #cfcfcf;
+    --gris_medio: #b1b1b1;
+    --gris_oscuro: #cacaca;
+
+
+    --fuentetitulos: 2.8rem
+}
+
+html{
+    font-size: 62,5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing:inherit;
+}
+body{
+    font-size: 16px; /* 1rem = 10px */
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(to top,
+    var(--gris_claro) 0%, white 100% );
+}
+
+footer{
+    text-align: center;
+    color: var(--gris_oscuro);
+}
+
+h1{
+    font-size: 3rem;
+    color: var(--negro);
+}
+h2{
+    font-size: 2.8rem;
+    color: var(--negro);
+}
+h3{
+    font-size: 1.8rem;
+    color: var(--gris_claro);
+}
+h1,h2,h3{
+    text-align: center;
+
+}
+
+.titulo span{
+    font-size: 1rem;
+    /* color: red!important; (sobrescribe a todos) */
+}  
+
+.sombra{
+    -webkit-box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.32);
+    -moz-box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.32);
+    box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.32);
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.nav-fondo{
+    background: linear-gradient(to right,
+    var(--violeta) 0%, var(--azul) 50%, var(--celeste) 100%);
+    /*
+    (to bottom right, to top left, etc..)
+    */
+}
+
+.contenedor{
+    max-width: 100rem;
+    margin: 0px auto;
+}
+
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+
+    /*
+    align-items: center;
+    */
+}
+
+@media (min-width: 480px) {
+    .navegacion-principal{
+    flex-direction: row;
+    justify-content: space-evenly;
+    }  
+}
+
+.navegacion-principal a{
+    display:block;
+    /*
+    text-align: center;
+    */
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.navegacion-principal a:hover{
+    background-color: black;
+}
+
+.hero{
+    background-image: url(../img/hero.jpg);
+    /*
+    filter: grayscale(100%);
+    filter: blur(2px);
+    */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 22.5rem;
+    position:relative;
+    margin-bottom: 2rem;
+}
+
+.contenido-hero{
+    position:absolute;
+    background-color: #1e1e1fc9;
+
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero p,
+.contenido-hero h2{
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+}
+
+.button{
+    background: linear-gradient(to bottom right,
+    var(--violeta) 0%, var(--azul) 55%, var(--celeste) 100%);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    width: 75%;
+    /*
+    box-shadow: 5px 5px 50px rgb(0, 0, 0);
+    text-transform:uppercase;
+    */
+}
+@media (min-width: 480px) {
+   .button{
+        width: 7.5rem;
+}
+}
+ .contenido-hero a:hover{
+    background: linear-gradient(to top right,
+    var(--violeta) 0%, var(--azul) 55%, var(--celeste) 100%);
+}
+
+/*      --------------- ALINEAMIENTO DE SERVICIOS (FLEX-BOX) ------------------
+.servicios{
+    text-align: center;
+}
+.servicios p{
+    font-size: 20px;
+}
+
+.a, .b, .c{
+    padding: 0.5rem; 
+    margin:1.5rem; 
+    text-align: center;
+}
+@media (min-width: 900px) {
+   .servicios{
+    display: flex;
+   }
+}
+*/
+
+/*      --------------- ALINEAMIENTO DE SERVICIOS (GRIDD-CSS) ------------------ */
+@media (min-width: 768px) {
+    .servicios{
+        display: grid;
+        grid-template-columns: repeat(3, 33.3%); 
+        column-gap: 1rem;
+    /*
+        repeat(3 (vecces), valor);
+        grid: 200px 800px / 300px 300px;    ------ ABREVIACIÓN ---------- 
+        grid-template-columns: 1fr 1fr 1fr; (fr= fracción)
+    */
+}
+}
+
+.servicios{
+    margin: 2rem;
+    text-align: center;
+    justify-content: center;
+}
+.servicio p{
+    color: var(--gris_oscuro);
+}
+.servicio{
+    margin-top: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
