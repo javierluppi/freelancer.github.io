@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--
-    <link rel="preload" href="Ss/normalize.css" as="styles">
-    -->
+    <link rel="preload" href="Styles/normalize.css" as="styles">
+    <link rel="stylesheet" href="Styles/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap" rel="stylesheet">
     <link rel="preload" href="Styles/estilos.css" as="styles">
-    <link href="estilos/estilos.css" rel="stylesheet">
+    <link href="Styles/estilos.css" rel="stylesheet">
 
     <title>Diseñador Freelance</title>
 </head>
@@ -45,7 +44,7 @@
         </div>
     </section>
     
-    <main class="contenedor sombra">
+    <main class="main contenedor sombra">
 
         <h2>Mis Servicios</h2>
 
@@ -99,52 +98,69 @@
                 looking at its layout.</p>
         </section>
         </div>
-    </main>
 
-        <section>
+
+        <section class="contacto">
             <h2>Contacto</h2>
 
-            <form>
+            <form class="formulario sombra">
                 <!--
                 El nos fieldset permite agrupar diferentes "campos"     
                 -->
                 <fieldset>
+                    <!--
                     <legend>Contáctame rellenando los campos </legend>
+                    -->     
+                    <div class="contenedor-campos">
+                        
+                        <div class="campo">                     
+                            <label>Nombre</label>
+                            <input class="texto-input" type="text" placeholder="Tu Nombre">
+                        </div>
 
-                    <div>                     
-                    <label>Nombre</label>
-                    <input type="text" placeholder="Tu Nombre">
-                    </div>
+                        <div class="campo">
+                            <label>Teléfono</label>
+                            <input class="texto-input"  type="number" placeholder="Tu Teléfono">
+                        </div>
 
-                    <div>
-                        <label>Teléfono</label>
-                        <input type="number" placeholder="Tu Teléfono">
-                    </div>
+                        <div class="campo">
+                            <label>Correo</label>
+                            <input class="texto-input"  type="email" placeholder="Tu Correo">
+                        </div>
 
-                    <div>
-                        <label>Correo</label>
-                        <input type="email" placeholder="Tu Correo">
-                    </div>
+                        <div class="campo ">
+                            <label>Mensaje</label>
+                                                        <!--
+                            <input class="texto-input texto-contacto" type="text" placeholder="">
+                            -->
+                            <textarea class="texto-input texto-contacto" placeholder="Tu Mensaje"></textarea>
 
-                    <div>
-                        <label>Mensaje</label>
-                        <textarea></textarea>
-                    </div>
+                        </div>
 
-                    <div>
-                        <!--
-                        <input type="submit" value="Mandar">  alternativa a button
-                        -->
-                        <button type="submit">Enviar</button>
-                    </div>
+                    </div>     
+                        <div class="alinear-derecha flex">
+                            <input class="button enviar" type="submit" value="Enviar"> 
+                            <!--
+                            <button class="button" type="submit">Enviar</button>  alternativa a input boton
+                            -->
+                        </div>
 
                 </fieldset>
             </form>
         </section>
+    </main>
     
     <footer>
         <p>Todos los derechos reservados. Javier Luppi® 2023</p>
     </footer>    
+
+
+    <!--
+        
+█▀▀ █▀█ ▄▀█ █▀▀ █ ▄▀█ █▀   █▀█ █▀█ █▀█   █░░ ▄▀█   █░█ █ █▀ █ ▀█▀ ▄▀█
+█▄█ █▀▄ █▀█ █▄▄ █ █▀█ ▄█   █▀▀ █▄█ █▀▄   █▄▄ █▀█   ▀▄▀ █ ▄█ █ ░█░ █▀█
+
+    -->
         
 </body>
 </html>
