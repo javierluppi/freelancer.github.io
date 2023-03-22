@@ -3,9 +3,10 @@
     --azul:#12c2e9;
     --violeta: #9671ed;
     --celeste: #8bf5db;
+    --gris_fondo: #ececec;
     --gris_claro: #cfcfcf;
-    --gris_medio: #b1b1b1;
-    --gris_oscuro: #cacaca;
+    --gris_medio: #cacaca;
+    --gris_oscuro: #b1b1b1;
 
 
     --fuentetitulos: 2.8rem
@@ -14,6 +15,7 @@
 html{
     font-size: 62,5%;
     box-sizing: border-box;
+    scroll-snap-type: y mandatory;
 }
 *, *:before, *:after{
     box-sizing:inherit;
@@ -22,12 +24,21 @@ body{
     font-size: 16px; /* 1rem = 10px */
     font-family: 'Roboto', sans-serif;
     background-image: linear-gradient(to top,
-    var(--gris_claro) 0%, white 100% );
+    var(--gris_fondo) 0%, white 100% );
+}
+/* SCROLL SNAP ***********************/
+
+.servicios,
+.navegacion-principal,
+.contacto{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 
 footer{
     text-align: center;
     color: var(--gris_oscuro);
+    font-size: 15px;
 }
 
 h1{
@@ -44,11 +55,11 @@ h3{
 }
 h1,h2,h3{
     text-align: center;
-
 }
 
 .titulo span{
     font-size: 1rem;
+    color:var(--gris_oscuro);
     /* color: red!important; (sobrescribe a todos) */
 }  
 
@@ -83,7 +94,7 @@ h1,h2,h3{
     */
 }
 
-@media (min-width: 680px) {
+@media (min-width: 480px) {
     .navegacion-principal{
     flex-direction: row;
     justify-content: space-evenly;
@@ -122,10 +133,8 @@ h1,h2,h3{
 .contenido-hero{
     position:absolute;
     background-color: #1e1e1fc9;
-
     width: 100%;
     height: 100%;
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -148,17 +157,38 @@ h1,h2,h3{
     font-weight: bold;
     font-size: 16px;
     text-align: center;
-    width: 75%;
+    width: 90%;
+    border: none;
     /*
     box-shadow: 5px 5px 50px rgb(0, 0, 0);
     text-transform:uppercase;
     */
 }
+.button:hover{
+    cursor: pointer;
+}
+
 @media (min-width: 480px) {
    .button{
-        width: 7.5rem;
+        width: 15rem;
+    }
 }
+
+/** UTILIDADES **/
+.alinear-derecha{
+    justify-content: center;
 }
+
+.flex{
+    display:flex;
+}
+
+@media (min-width: 600px) {
+    .alinear-derecha{
+        justify-content: flex-end;
+    }   
+}
+
  .contenido-hero a:hover{
     background: linear-gradient(to top right,
     var(--violeta) 0%, var(--azul) 55%, var(--celeste) 100%);
@@ -199,39 +229,86 @@ h1,h2,h3{
 }
 
 .servicios{
-    margin: 2rem;
+    margin: 1rem;
     text-align: center;
     justify-content: center;
 }
 .servicio p{
     color: var(--gris_oscuro);
+    text-align: justify;
+    font-size: 1rem;
 }
 .servicio{
     margin-top: 1rem;
 }
 
+/*      -------------------------------- FORMULARIO --------------------------------- */
 
+.formulario{
+    background-color: white;
+    width: min( 50rem, 100%); 
+    /*
+    lo que hace esta funcion es comparar el primer valor con el segundo, siempre eligiendo
+    el mas pequeño. ¿que es mas pequeño? 50 rem o 100%, 100% representando x px.
+    También nos podemos ahorrar algún media queries. 
+    */
+    margin: 0 auto;
+    padding: 2rem;
 
+}
 
+.formulario fieldset{
+    border: none;
+}
+.formulario legend{
+    margin: 0 auto;
+    color: var(--violeta);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
 
+@media (min-width: 768px) {
+    .contenedor-campos{
+        display:grid;
+        grid-template-columns: repeat(2, 50%);
+        column-gap: 1rem;
+        grid-template-rows: auto auto 13rem ;
+    }    
+    .campo:nth-child(3),
+    .campo:nth-child(4){
+        grid-column: 1/3;
+    }
+}
 
+.campo{
+    margin-bottom: 1rem;
+    color: var(--gris_oscuro);
+}
 
+.campo label{  
+    margin-bottom: .5rem;
+    display:block;
+}
 
+.texto-input{
+    width: 100%;
+    border: none;
+    background-color: var(--gris_fondo);
+    border-radius: 5px;
+    height: 1.8rem;
+    color: var(--gris_oscuro);
+    padding-left: 0.5rem;
+}
 
+.texto-contacto{
+    height: 10rem;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.enviar .button{
+    display: flex;
+    width: auto;
+}
 
 
 
