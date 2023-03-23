@@ -28,12 +28,14 @@ body{
 }
 /* SCROLL SNAP ***********************/
 
+/*
 .servicios,
 .navegacion-principal,
 .contacto{
     scroll-snap-align: center;
     scroll-snap-stop: always;
 }
+*/
 
 footer{
     text-align: center;
